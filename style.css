@@ -608,3 +608,112 @@ button:hover {
     border-radius: 20px;
      border: 3px solid #e484a2;
 }
+
+@media (max-width: 430px) {
+
+    body {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .container_login,
+    #home.active,
+    #album,
+    #memoria,
+    #poema,
+    .container {
+        max-width: 100%;
+        width: 100%;
+        padding: 1em;
+        height: auto;
+    }
+
+    .titulo {
+        font-size: 1.6rem;
+    }
+
+    #pinDisplay {
+        font-size: 1rem;
+        letter-spacing: 0.2em;
+        padding: 0.4em;
+    }
+
+    .num-pad button {
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .home-buttons button {
+        height: auto;
+        min-height: 60px;
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    .album-grid img {
+        width: 42%;
+    }
+
+    .slider-container {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .polaroid {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+    }
+
+    .polaroid img {
+        height: 200px;
+    }
+
+    .btn-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .btn-prev {
+        left: -50px;
+    }
+
+    .btn-next {
+        right: -50px;
+    }
+
+    .game-container {
+        width: 100%;
+        padding: 1em;
+        height: auto;
+    }
+
+    .mini_player {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .imagem_player img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .container_poema {
+        width: 100%;
+        padding: 1em;
+        font-size: 1rem;
+    }
+
+    .texto_album {
+        width: 100%;
+        font-size: 1.2rem;
+        right: 0;
+        bottom: 0;
+        position: static;
+        padding: 1em;
+    }
+}
