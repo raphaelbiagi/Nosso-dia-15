@@ -1,0 +1,395 @@
+/* --- Reset e base --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #ffc1d6;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fundo principal */
+.fundo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+/* Container login */
+.container_login {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.container_login.active {
+    display: flex;
+}
+
+/* Título */
+.titulo {
+    color: white;
+    font-size: 2.2rem; /* Ajustado para rem */
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: 1em;
+    font-size: 1.5rem;
+}
+
+/* Campo PIN */
+#pinDisplay {
+    display: flex;
+    width: 100%;
+    padding: 0.7em;
+    font-size: 1.5rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    background: #ffffff;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+#pinDisplay i {
+    font-size: 1.5rem;
+    color: #a7a7a768;
+}
+
+.pin_dots {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Teclado */
+.num-pad {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.7em;
+    margin-bottom: 1em;
+}
+
+.num-pad button {
+    width: 100%; /* Mudança para 100% da célula */
+    height: 60px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffd7e4;
+    color: rgb(66, 66, 66);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.num-pad button:hover {
+    background-color: #ef9ab5;
+}
+
+.num-pad button.clear {
+    background-color: #ff91b4;
+}
+
+.num-pad button.clear:hover {
+    background-color: #fc6192;
+}
+
+/* Tela Home */
+#home {
+    display: none;
+}
+
+#home.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* largura responsiva */
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.home-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Botões Home - grandes mas responsivos */
+.home-buttons button {
+    width: 100%; /* ocupa toda largura do container */
+    height: 240px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #fff;
+    border: 3px solid #e484a2;
+    color: #fc6192;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.home-buttons button:hover {
+    transform: scale(1.05);
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+
+    i{
+        background-color: #ffe8f0;
+        color: #eb82a4;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        font-size: 40px;
+    }
+
+    h3{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/* Grid álbum */
+.album-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.album-grid img {
+    width: 30%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Botão voltar */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background-color: #ff91b4;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #fc6192;
+}
+
+.sair{
+    position: absolute;
+    top: 100px;
+    left: 10px;
+}
+
+/* === MEDIA QUERY para Galaxy A55 e telas até 430px === */
+@media (max-width: 430px) {
+    .container_login,
+    #home.active,
+    #album,
+    #memoria,
+    #poema {
+        max-width: 100%;
+        padding: 1em;
+        height: auto;
+    }
+
+    /* Título menor e ajuste no login */
+    .titulo {
+        font-size: 1.8rem;
+    }
+
+    #pinDisplay {
+        font-size: 1.2rem;
+        letter-spacing: 0.2em;
+        padding: 0.5em;
+    }
+
+    /* Botões do teclado menores */
+    .num-pad button {
+        height: 50px;
+        font-size: 1.1rem;
+    }
+
+    /* Botões home ficam mais compactos */
+    .home-buttons button {
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    /* Fotos do álbum menores e com gap reduzido */
+    .album-grid img {
+        width: 45%;
+    }
+}
+
+.sub-section {
+  display: none;
+}
+
+.sub-section.active {
+  display: block; /* ou flex, dependendo do layout */
+}
+
+.texto_album{
+    position: absolute;
+    right: 220px;
+    width: 600px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+/* O menu inicialmente visível */
+#homeMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Quando alguma sub-seção estiver ativa, esconda o menu */
+.sub-section.active ~ #homeMenu {
+  display: none;
+}
+
+.slider-container {
+      position: relative;
+      width: 320px;
+      height: 400px;
+      perspective: 1500px;
+    }
+
+    .polaroid {
+      position: absolute;
+      width: 280px;
+      height: 320px;
+      background: white;
+      border: 12px solid white;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      border-radius: 8px;
+      cursor: grab;
+      user-select: none;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      overflow: hidden;
+    }
+
+    .polaroid img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    .caption {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #333;
+      padding-bottom: 12px;
+    }
+
+    /* Posicionamento inicial - centraliza o slide ativo */
+    .polaroid.active {
+      z-index: 10;
+      transform: translateX(0) translateZ(0) rotate(0deg) scale(1);
+      opacity: 1;
+      cursor: grab;
+    }
+
+    /* Slides anteriores e próximos, com leve rotação e desfoque */
+    .polaroid.prev {
+      z-index: 5;
+      transform: translateX(-160px) translateZ(-200px) rotate(-15deg) scale(0.8);
+      opacity: 0.5;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .polaroid.next {
+      z-index: 5;
+      transform: translateX(160px) translateZ(-200px) rotate(15deg) scale(0.8);
+      opacity: 0.5;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    /* Oculta os outros slides */
+    .polaroid.hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(0) translateZ(-300px) scale(0.6);
+    }
+
+    /* Botões */
+    .btn-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #ff6699;
+      border: none;
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(255, 102, 153, 0.6);
+      transition: background 0.3s;
+      user-select: none;
+    }
+
+    .btn-nav:hover {
+      background: #ff3366;
+    }
+
+    .btn-prev {
+      left: -60px;
+    }
+
+    .btn-next {
+      right: -60px;
+    }

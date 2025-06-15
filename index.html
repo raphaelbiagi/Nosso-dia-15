@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Para Você💖</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Tela Login -->
+    <div class="fundo">
+        <section id="login" class="container_login active">
+            <img src="./assest/laco-de-cabelo.png" style="width: 100px;" />
+            <h1 class="titulo">NOSSO DIA 15</h1>
+            <h3 style="color: white; font-weight: 400;">Uma data especial para nós</h3>
+            <div id="pinDisplay">
+                <div class="icone_lock">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="pin_dots">
+                    <span id="pinDots">••••••••</span>
+                </div>
+            </div>
+
+            <div class="num-pad">
+                <button data-num="1">1</button>
+                <button data-num="2">2</button>
+                <button data-num="3">3</button>
+                <button data-num="4">4</button>
+                <button data-num="5">5</button>
+                <button data-num="6">6</button>
+                <button data-num="7">7</button>
+                <button data-num="8">8</button>
+                <button data-num="9">9</button>
+                <button data-num="0">0</button>
+                <button class="clear">C</button>
+            </div>
+        </section>
+
+        <!-- Tela Home -->
+        <section id="home" class="container">
+            <div id="cabecalho" style="color: white;" class="message">Bem-vindo, <span id="userDisplay"></span>! ❤️
+            </div>
+
+            <div id="homeMenu" class="home-buttons">
+                <button onclick="showSection('album')">
+                    <div class="header">
+                        <i class="fa-solid fa-camera-retro"></i>
+                        <h3>Nossos momentos ❤️</h3>
+                    </div>
+                </button>
+                <button onclick="showSection('memoria')">🧠 Jogo da Memória</button>
+                <button onclick="showSection('poema')">✍️ Poema</button>
+            </div>
+        </section>
+        <section id="album" class="sub-section container">
+            <button class="sair" onclick="goHome()">Voltar</button>
+            <div class="slider-container">
+                <button class="btn-nav btn-prev" aria-label="Slide Anterior">&#10094;</button>
+                <button class="btn-nav btn-next" aria-label="Próximo Slide">&#10095;</button>
+
+                <!-- Polaroids -->
+                <div class="polaroid active" data-index="0">
+                    <img src="./assest/1.jpeg" alt="Foto 1" />
+
+                </div>
+
+                <div class="polaroid next" data-index="1">
+                    <img src="./assest/2.jpeg" alt="Foto 2" />
+
+                </div>
+
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/3.jpeg" alt="Foto 3" />
+
+                </div>
+
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/4.jpeg" alt="Foto 4" />
+
+                </div>
+
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/5.jpeg" alt="Foto 5" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/6.jpeg" alt="Foto 6" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/7.jpeg" alt="Foto 7" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/8.jpeg" alt="Foto 8" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/9.jpeg" alt="Foto 9" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/10.jpeg" alt="Foto 10" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/11.jpeg" alt="Foto 11" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/12.jpeg" alt="Foto 12" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/13.jpeg" alt="Foto 13" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/14.jpeg" alt="Foto 14" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/15.jpeg" alt="Foto 15" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/16.jpeg" alt="Foto 16" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/17.jpeg" alt="Foto 17" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/18.jpeg" alt="Foto 18" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/19.jpeg" alt="Foto 19" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/20.jpeg" alt="Foto 20" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/21.jpeg" alt="Foto 21" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/22.jpeg" alt="Foto 22" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/23.jpeg" alt="Foto 23" />
+
+                </div>
+                <div class="polaroid hidden" data-index="2">
+                    <img src="./assest/24.jpeg" alt="Foto 24" />
+
+                </div>
+
+
+
+            </div>
+            <div class="texto_album">Cada foto aqui é um pedacinho da nossa aventura juntos — das gargalhadas que viraram cócegas no
+                coração, dos limites que a gente ultrapassou, e dos momentos que viraram memórias eternas. Nosso
+                álbum de histórias, escrito com sorrisos e amor.</div>
+        </section>
+
+        <section id="memoria" class="sub-section container">
+            teste2
+        </section>
+
+        <section id="poema" class="sub-section container">
+            teste23
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
