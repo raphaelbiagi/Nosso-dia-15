@@ -13,13 +13,14 @@
 <body>
     <!-- Tela Login -->
     <div class="fundo">
+
         <section id="login" class="container_login active">
             <img src="./assest/laco-de-cabelo.png" style="width: 100px;" />
             <h1 class="titulo">NOSSO DIA 15</h1>
             <h3 style="color: white; font-weight: 400;">Uma data especial para nós</h3>
             <div id="pinDisplay">
                 <div class="icone_lock">
-                    <i class="fa-solid fa-lock"></i>
+                    <i id="cadeado" class="fa-solid fa-lock"></i>
                 </div>
                 <div class="pin_dots">
                     <span id="pinDots">••••••••</span>
@@ -43,22 +44,72 @@
 
         <!-- Tela Home -->
         <section id="home" class="container">
-            <div id="cabecalho" style="color: white;" class="message">Bem-vindo, <span id="userDisplay"></span>! ❤️
+            <div id="cabecalho" style="color: white;font-size: 30px;" class="message">Bem-vindo, <span
+                    id="userDisplay"></span>! ❤️
+                <div id="player" class="mini_player">
+                    <div class="imagem_player">
+                        <img id="cover" src="" alt="Capa da música" />
+                    </div>
+                    <div class="reproducao">
+                        <div id="nome_musica"
+                            style="font-weight:bold; font-size: 18px; margin-bottom:5px;color: white;">
+                        </div>
+                        <div id="artist" style="color:#bbb; font-size: 16px; margin-bottom:10px;">Artista</div>
+                        <div style="margin-top:15px;">
+                            <input type="range" id="progress" value="0" max="100"
+                                style="width:100%; accent-color:#fff;" />
+                            <div style="display:flex; justify-content:space-between; font-size:12px; color:#aaa;">
+                                <span id="currentTime">0:00</span>
+                                <span id="duration">0:00</span>
+                            </div>
+                        </div>
+                        <div>
+                            <button id="btn-prev"
+                                style="background:none; border:none; color:#fff; font-size:24px; cursor:pointer;">
+                                <i class="fa-solid fa-backward"></i>
+                            </button>
+
+                            <button id="btn-play-pause"
+                                style="background:none; border:none; color:#fff; font-size:28px; cursor:pointer;">
+                                <i id="icon-play-pause" class="fa-solid fa-play"></i>
+                            </button>
+
+                            <button id="btn-next"
+                                style="background:none; border:none; color:#fff; font-size:24px; cursor:pointer;">
+                                <i class="fa-solid fa-forward"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <audio id="audio"></audio>
+                </div>
+
+
             </div>
 
             <div id="homeMenu" class="home-buttons">
                 <button onclick="showSection('album')">
                     <div class="header">
                         <i class="fa-solid fa-camera-retro"></i>
-                        <h3>Nossos momentos ❤️</h3>
+                        <h3>Nossos momentos</h3>
                     </div>
                 </button>
-                <button onclick="showSection('memoria')">🧠 Jogo da Memória</button>
-                <button onclick="showSection('poema')">✍️ Poema</button>
+                <button onclick="showSection('memoria')">
+                    <div class="header">
+                        <i class="fa-regular fa-circle-question"></i>
+                        <h3>Jogo das questões</h3>
+                    </div>
+                </button>
+                <button onclick="showSection('poema')">
+                    <div class="header">
+                        <i class="fa-solid fa-scroll"></i>
+                        <h3>Poema</h3>
+                    </div>
+                </button>
             </div>
         </section>
         <section id="album" class="sub-section container">
-            <button class="sair" onclick="goHome()">Voltar</button>
+
+            <button class="sair" onclick="goHome('f')">Voltar</button>
             <div class="slider-container">
                 <button class="btn-nav btn-prev" aria-label="Slide Anterior">&#10094;</button>
                 <button class="btn-nav btn-next" aria-label="Próximo Slide">&#10095;</button>
@@ -168,17 +219,67 @@
 
 
             </div>
-            <div class="texto_album">Cada foto aqui é um pedacinho da nossa aventura juntos — das gargalhadas que viraram cócegas no
+            <div class="texto_album">Cada foto aqui é um pedacinho da nossa aventura juntos — das gargalhadas
+                que viraram cócegas no
                 coração, dos limites que a gente ultrapassou, e dos momentos que viraram memórias eternas. Nosso
-                álbum de histórias, escrito com sorrisos e amor.</div>
-        </section>
+                álbum de histórias, escrito com sorrisos e amor. 🌹❤️</div>
 
+        </section>
+        <div class="bg_heart"></div>
         <section id="memoria" class="sub-section container">
-            teste2
+            <button class="sair" onclick="goHome('q')">Voltar</button>
+
+            <div class="game-container">
+                <div id="heartDisplay">
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                </div>
+                <div id="questionContainer">
+                    <div class="question" id="questionText">Clique em Começar para jogar!</div>
+                    <div class="options" id="options"></div>
+                    <button id="começar" onclick="startGame()">Começar</button>
+                </div>
+                <div id="finalMessage" class="final-message">
+                    <p>Parabéns! Você desbloqueou meu coração! </p>
+                    <div class="coracao_pulsar">
+                        <img src="./assest/Captura de tela 2025-06-15 111855.webp" />
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <section id="poema" class="sub-section container">
-            teste23
+             <button class="sair" onclick="goHome('p')">Voltar</button>
+            <div class="container_poema">
+                <p
+                    style="font-family: 'Dancing Script', cursive; font-size: 1.3em; color: #c2185b; white-space: pre-line;">
+                    🌹 "No compasso do teu sorriso" 🌹
+
+                    No relógio do tempo que não se apressa,
+                    cada segundo contigo vira eternidade.
+                    Teu olhar — luz que atravessa
+                    minha sombra e vira claridade.
+
+                    Tua voz me embala mais que canção,
+                    e tua presença acalma o caos do mundo.
+                    É no teu toque que meu coração
+                    faz morada, leve e profundo.
+
+                    Te amo no detalhe que ninguém vê,
+                    no silêncio entre as palavras ditas,
+                    na flor que desabrocha só por ser
+                    regada por nossas risadas bonitas.
+
+                    Se o amor é poema, tu és minha rima,
+                    meu verso solto, meu ponto final.
+                    E neste dia que o destino nos anima,
+                    te celebro, amor, meu bem mais vital
+                </p>
+            </div>
         </section>
     </div>
 
